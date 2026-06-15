@@ -8,136 +8,130 @@
 </head>
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
     <h2>Barbería San Martín</h2>
 
-    <div class="menu-toggle" id="menu-toggle">
+    <div class="links" id="nav">
+        <a href="#" onclick="cerrarMenu()">Inicio</a>
+        <a href="../index.html" onclick="cerrarMenu()">Mi Portfolio</a>
+        <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+        <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+    </div>
+
+    <button class="btn" id="reservarBtn">Reservar</button>
+
+    <div class="menu-responsive" onclick="mostrarOcultarMenu()">
         ☰
     </div>
-
-    <div class="links" id="links">
-        <a href="#">Inicio</a>
-        <a href="../index.html">Mi Portfolio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </div>
-
-    <button class="btn" id="reservarBtn">
-        Reservar
-    </button>
 </nav>
 
-    <section class="hero">
-        <h1>Cortes clásicos y modernos</h1>
+<section class="hero">
+    <h1>Cortes clásicos y modernos</h1>
+    <p>Atención profesional en un ambiente cómodo y elegante.</p>
 
-        <p>
-            Atención profesional en un ambiente cómodo y elegante.
-        </p>
+    <button class="btn" id="serviciosBtn">
+        Ver servicios
+    </button>
+</section>
 
-        <button class="btn" id="serviciosBtn">
-            Ver servicios
-        </button>
+<section class="aviso">
+    <p>
+        Proyecto ficticio desarrollado para mostrar habilidades de HTML, CSS y JavaScript.
+        La barbería y los datos mostrados no corresponden a un negocio real.
+    </p>
+</section>
+
+<section class="cards" id="servicios">
+    <section class="card">
+        <h3>Corte Clásico</h3>
+        <p>$8.000</p>
     </section>
 
-    <section class="aviso">
-        <p>
-            Proyecto ficticio desarrollado para mostrar habilidades de HTML, CSS y JavaScript.
-            La barbería y los datos mostrados no corresponden a un negocio real.
-        </p>
+    <section class="card">
+        <h3>Arreglo de Barba</h3>
+        <p>$5.000</p>
     </section>
 
-    <section class="cards" id="servicios">
-
-        <section class="card">
-            <h3>Corte Clásico</h3>
-            <p>$8.000</p>
-        </section>
-
-        <section class="card">
-            <h3>Arreglo de Barba</h3>
-            <p>$5.000</p>
-        </section>
-
-        <section class="card">
-            <h3>Corte + Barba</h3>
-            <p>$12.000</p>
-        </section>
-
+    <section class="card">
+        <h3>Corte + Barba</h3>
+        <p>$12.000</p>
     </section>
+</section>
 
-    <section class="elegirnos">
+<section class="elegirnos">
+    <h2>¿Por qué elegirnos?</h2>
 
-        <h2>¿Por qué elegirnos?</h2>
-
-        <div class="beneficios">
-
-            <div class="beneficio">
-                <h3>Experiencia</h3>
-                <p>
-                    Más de diez años trabajando con clientes de todas las edades.
-                </p>
-            </div>
-
-            <div class="beneficio">
-                <h3>Atención personalizada</h3>
-                <p>
-                    Cada corte se adapta al estilo y preferencias del cliente.
-                </p>
-            </div>
-
-            <div class="beneficio">
-                <h3>Calidad</h3>
-                <p>
-                    Herramientas profesionales y productos de primera línea.
-                </p>
-            </div>
-
+    <div class="beneficios">
+        <div class="beneficio">
+            <h3>Experiencia</h3>
+            <p>Más de diez años trabajando con clientes de todas las edades.</p>
         </div>
 
-    </section>
+        <div class="beneficio">
+            <h3>Atención personalizada</h3>
+            <p>Cada corte se adapta al estilo y preferencias del cliente.</p>
+        </div>
 
-    <section class="horario">
-        <h2>Horario de atención</h2>
-        <p id="estado"></p>
-    </section>
+        <div class="beneficio">
+            <h3>Calidad</h3>
+            <p>Herramientas profesionales y productos de primera línea.</p>
+        </div>
+    </div>
+</section>
 
-    <footer id="contacto">
-        <p>© <span id="anio"></span> Barbería San Martín</p>
-        <p>Proyecto de demostración</p>
-    </footer>
+<section class="horario">
+    <h2>Horario de atención</h2>
+    <p id="estado"></p>
+</section>
 
-    <script>
-        const reservarBtn = document.getElementById("reservarBtn");
-        const serviciosBtn = document.getElementById("serviciosBtn");
+<footer id="contacto">
+    <p>© <span id="anio"></span> Barbería San Martín</p>
+    <p>Proyecto de demostración</p>
+</footer>
 
-        reservarBtn.addEventListener("click", () => {
-            alert("Esta barbería es un proyecto ficticio para portfolio.");
-        });
+<script>
+const reservarBtn = document.getElementById("reservarBtn");
+const serviciosBtn = document.getElementById("serviciosBtn");
 
-        serviciosBtn.addEventListener("click", () => {
-            document.getElementById("servicios").scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-
-        const estado = document.getElementById("estado");
-        const hora = new Date().getHours();
-
-        if (hora >= 9 && hora < 20) {
-            estado.textContent = "Abierto ahora";
-        } else {
-            estado.textContent = "Cerrado en este momento";
-        }
-
-        document.getElementById("anio").textContent =
-            new Date().getFullYear();
-        const menuToggle = document.getElementById("menu-toggle");
-const links = document.getElementById("links");
-
-menuToggle.addEventListener("click", () => {
-    links.classList.toggle("active");
+reservarBtn.addEventListener("click", () => {
+    alert("Esta barbería es un proyecto ficticio para portfolio.");
 });
-    </script>
+
+serviciosBtn.addEventListener("click", () => {
+    document.getElementById("servicios").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+const estado = document.getElementById("estado");
+const hora = new Date().getHours();
+
+estado.textContent = (hora >= 9 && hora < 20)
+    ? "Abierto ahora"
+    : "Cerrado en este momento";
+
+document.getElementById("anio").textContent = new Date().getFullYear();
+
+let menuVisible = false;
+
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav");
+
+    if (menuVisible) {
+        nav.classList.remove("responsive");
+    } else {
+        nav.classList.add("responsive");
+    }
+
+    menuVisible = !menuVisible;
+}
+
+function cerrarMenu() {
+    const nav = document.getElementById("nav");
+    nav.classList.remove("responsive");
+    menuVisible = false;
+}
+</script>
 
 </body>
 </html>
