@@ -30,7 +30,8 @@ h1 {
 
 .pricing-card {
     background: white;
-    width: 300px;
+        width: 100%;
+    max-width: 300px;
     padding: 40px 30px;
     border-radius: 18px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -87,4 +88,76 @@ li {
 
 .btn:hover {
     transform: scale(1.05);
+}
+
+
+/* TABLETS */
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .pricing-container {
+        gap: 20px;
+    }
+
+    .pricing-card {
+        width: 280px;
+    }
+
+    .featured {
+        transform: scale(1);
+    }
+}
+
+/* CELULARES */
+@media screen and (max-width: 600px) {
+
+    .pricing-section {
+        padding: 50px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 340px;
+        padding: 30px 20px;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .badge {
+        right: 15px;
+        top: -10px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+html,
+body {
+    overflow-x: hidden;
 }
