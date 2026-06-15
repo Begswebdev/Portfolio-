@@ -9,19 +9,23 @@
 <body>
 
     <nav class="navbar">
-        <h2>Barbería San Martín</h2>
+    <h2>Barbería San Martín</h2>
 
-        <div class="links">
-            <a href="#">Inicio</a>
-            <a href="../index.html">Mi Portfolio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
-        </div>
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
 
-        <button class="btn" id="reservarBtn">
-            Reservar
-        </button>
-    </nav>
+    <div class="links" id="links">
+        <a href="#">Inicio</a>
+        <a href="../index.html">Mi Portfolio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <button class="btn" id="reservarBtn">
+        Reservar
+    </button>
+</nav>
 
     <section class="hero">
         <h1>Cortes clásicos y modernos</h1>
@@ -127,6 +131,12 @@
 
         document.getElementById("anio").textContent =
             new Date().getFullYear();
+        const menuToggle = document.getElementById("menu-toggle");
+const links = document.getElementById("links");
+
+menuToggle.addEventListener("click", () => {
+    links.classList.toggle("active");
+});
     </script>
 
 </body>
