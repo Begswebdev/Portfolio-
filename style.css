@@ -546,8 +546,8 @@ footer .arriba:hover {
         width: 100%;
     }
     .cv .fila .derecha{
-        margin-left: 20px;
-    }
+    margin-left: 0;
+}
     .portfolio .galeria {
         display: block;
         width: 100%;
@@ -555,7 +555,7 @@ footer .arriba:hover {
     .portfolio .galeria .proyecto {
         max-width: 100%;
     }
-    portfolio .galeria .proyecto img {
+    .portfolio .galeria .proyecto img {
         width: 100%;
     }
     .contacto .fila {
@@ -567,4 +567,20 @@ footer .arriba:hover {
     padding: 10px;
     position: relative;
 }
+.cv .fila .izquierda,
+.cv .fila .derecha{
+    border: none;
+}
+
+.conectori,
+.conectord,
+.circuloi,
+.circulod{
+    display: none;
+}
+    
+}
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
