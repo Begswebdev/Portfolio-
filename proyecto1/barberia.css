@@ -217,3 +217,96 @@ footer {
 footer p {
     color: #d4d4d4;
 }
+/* MENU HAMBURGUESA */
+.menu-toggle{
+    display: none;
+    color: #c9a227;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* TABLET */
+@media screen and (max-width: 900px){
+
+    .navbar{
+        padding: 20px;
+    }
+
+    .hero h1{
+        font-size: 3rem;
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+
+    .navbar{
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .links{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+        gap: 0;
+    }
+
+    .links.active{
+        display: flex;
+    }
+
+    .links a{
+        padding: 15px 0;
+        border-top: 1px solid rgba(201,162,39,0.3);
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .hero{
+        padding: 100px 20px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .beneficios{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficio{
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+/* EVITA SCROLL HORIZONTAL */
+html,
+body{
+    overflow-x: hidden;
+}
