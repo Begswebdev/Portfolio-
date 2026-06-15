@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background: #E2E8F0;
+    font-family: Arial, sans-serif;
+}
+
+.pricing-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #1E293B;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #64748B;
+    margin-bottom: 60px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    width: 300px;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+.featured {
+    transform: scale(1.06);
+    border: 2px solid #3B82F6;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #3B82F6;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    color: #3B82F6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+li {
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+.btn {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
