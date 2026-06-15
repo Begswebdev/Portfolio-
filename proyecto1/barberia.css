@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #111111;
+    background-color: #111;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,6 +15,8 @@ body {
     align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid #c9a227;
+    position: relative;
+    z-index: 9999;
 }
 
 .navbar h2 {
@@ -27,14 +29,31 @@ body {
     gap: 25px;
 }
 
-a {
+.links a {
     color: white;
     text-decoration: none;
     transition: 0.3s;
 }
 
-a:hover {
+.links a:hover {
     color: #c9a227;
+}
+
+.btn {
+    background-color: #c9a227;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu-responsive {
+    display: none;
+    font-size: 30px;
+    color: #c9a227;
+    cursor: pointer;
 }
 
 .hero {
@@ -48,12 +67,9 @@ a:hover {
     content: "";
     position: absolute;
     inset: 0;
-
     background-image: url("https://img.magnific.com/foto-gratis/herramientas-salon-marco-vintage-mesa-madera-trabajos-concepto-carrera_53876-143259.jpg?semt=ais_hybrid&w=740&q=80");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-
     z-index: -2;
 }
 
@@ -61,60 +77,23 @@ a:hover {
     content: "";
     position: absolute;
     inset: 0;
-
-    background: rgba(0, 0, 0, 0.75);
-
+    background: rgba(0,0,0,0.75);
     z-index: -1;
-}
-
-.hero h1,
-.hero p,
-.hero button {
-    position: relative;
-    z-index: 1;
 }
 
 .hero h1 {
     color: #c9a227;
     font-size: 3.5rem;
-    margin-bottom: 10px;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-}
-
-.hero h1::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 2px;
-    background-color: #c9a227;
-    margin: 15px auto 0;
 }
 
 .hero p {
-    color: #f5f5f5;
+    color: white;
     font-size: 1.2rem;
-    margin-bottom: 30px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-
-.btn {
-    background-color: #c9a227;
-    color: black;
-    border: none;
-    border-radius: 6px;
-    padding: 12px 24px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
 }
 
 .aviso {
     max-width: 900px;
-    margin: 0 auto;
+    margin: auto;
     padding: 20px;
     text-align: center;
     border-top: 1px solid #c9a227;
@@ -123,7 +102,6 @@ a:hover {
 
 .aviso p {
     color: #bdbdbd;
-    font-size: 0.9rem;
 }
 
 .cards {
@@ -141,11 +119,6 @@ a:hover {
     width: 220px;
     padding: 25px;
     text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
 }
 
 .card h3 {
@@ -178,11 +151,6 @@ a:hover {
     border: 1px solid #c9a227;
     border-radius: 10px;
     padding: 20px;
-    transition: 0.3s;
-}
-
-.beneficio:hover {
-    transform: translateY(-5px);
 }
 
 .beneficio h3 {
@@ -204,7 +172,6 @@ a:hover {
 
 .horario p {
     color: #d4d4d4;
-    font-size: 1.1rem;
 }
 
 footer {
@@ -217,96 +184,36 @@ footer {
 footer p {
     color: #d4d4d4;
 }
-/* MENU HAMBURGUESA */
-.menu-toggle{
-    display: none;
-    color: #c9a227;
-    font-size: 32px;
-    cursor: pointer;
-}
 
-/* TABLET */
-@media screen and (max-width: 900px){
-
-    .navbar{
-        padding: 20px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .links {
+        display: none;
     }
 
-    .hero h1{
-        font-size: 3rem;
+    .navbar .btn {
+        display: none;
     }
 
-}
-
-
-@media screen and (max-width: 768px){
-
-    .navbar{
-        flex-wrap: wrap;
-        padding: 15px 20px;
-    }
-
-    .menu-toggle{
+    .menu-responsive {
         display: block;
     }
 
-    .links{
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 15px;
-        gap: 0;
-    }
-
-    .links.active{
+    .links.responsive {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        width: 200px;
+        background: #181818;
+        border: 1px solid #c9a227;
+        padding: 20px;
+        gap: 15px;
+        z-index: 10000;
     }
 
-    .links a{
-        padding: 15px 0;
-        border-top: 1px solid rgba(201,162,39,0.3);
-    }
-
-    .btn{
-        display: none;
-    }
-
-    .hero{
-        padding: 100px 20px;
-    }
-
-    .hero h1{
+    .hero h1 {
         font-size: 2rem;
     }
-
-    .hero p{
-        font-size: 1rem;
-    }
-
-    .cards{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card{
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .beneficios{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .beneficio{
-        width: 90%;
-        max-width: 320px;
-    }
-}
-
-/* EVITA SCROLL HORIZONTAL */
-html,
-body{
-    overflow-x: hidden;
 }
