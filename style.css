@@ -561,7 +561,10 @@ footer .arriba:hover {
     .contacto .fila {
         display: block;
     }
-    .contacto .fila .col{
-        width: 100%;
-    }
+    .contacto .col {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+}
 }
