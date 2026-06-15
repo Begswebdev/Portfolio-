@@ -1,8 +1,4 @@
-body {
-    margin: 0;
-    background: #E2E8F0;
-    font-family: Arial, sans-serif;
-}
+
 
 .pricing-section {
     text-align: center;
@@ -164,6 +160,7 @@ body {
     font-size: 30px;
     color: #d4af37;
     cursor: pointer;
+}
 @media screen and (max-width:768px){
 
     .menu-toggle{
