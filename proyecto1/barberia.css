@@ -8,6 +8,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* NAVBAR */
+
 .navbar {
     background-color: #181818;
     display: flex;
@@ -47,6 +49,12 @@ body {
     padding: 12px 24px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e0bc3c;
+    transform: translateY(-2px);
 }
 
 .menu-responsive {
@@ -55,6 +63,8 @@ body {
     color: #c9a227;
     cursor: pointer;
 }
+
+/* HERO */
 
 .hero {
     position: relative;
@@ -77,7 +87,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     z-index: -1;
 }
 
@@ -91,6 +101,12 @@ body {
     font-size: 1.2rem;
 }
 
+.hero .btn {
+    margin-top: 15px;
+}
+
+/* AVISO */
+
 .aviso {
     max-width: 900px;
     margin: auto;
@@ -103,6 +119,8 @@ body {
 .aviso p {
     color: #bdbdbd;
 }
+
+/* SERVICIOS */
 
 .cards {
     display: flex;
@@ -119,6 +137,11 @@ body {
     width: 220px;
     padding: 25px;
     text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card h3 {
@@ -128,6 +151,8 @@ body {
 .card p {
     color: #d4d4d4;
 }
+
+/* POR QUÉ ELEGIRNOS */
 
 .elegirnos {
     text-align: center;
@@ -151,6 +176,11 @@ body {
     border: 1px solid #c9a227;
     border-radius: 10px;
     padding: 20px;
+    transition: 0.3s;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
 }
 
 .beneficio h3 {
@@ -160,6 +190,8 @@ body {
 .beneficio p {
     color: #d4d4d4;
 }
+
+/* HORARIO */
 
 .horario {
     text-align: center;
@@ -174,6 +206,8 @@ body {
     color: #d4d4d4;
 }
 
+/* FOOTER */
+
 footer {
     text-align: center;
     padding: 30px;
@@ -185,8 +219,85 @@ footer p {
     color: #d4d4d4;
 }
 
+/* MODAL CONTACTO */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 20000;
+    padding: 20px;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: #181818;
+    border: 1px solid #c9a227;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: aparecer 0.25s ease;
+}
+
+.modal-contenido h2 {
+    color: #c9a227;
+    margin-top: 0;
+}
+
+.modal-contenido p {
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+.modal-contenido .btn {
+    margin-top: 15px;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #c9a227;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
     .links {
         display: none;
     }
@@ -213,7 +324,19 @@ footer p {
         z-index: 10000;
     }
 
+    .hero {
+        padding: 100px 20px;
+    }
+
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .modal-contenido {
+        padding: 25px 20px;
     }
 }
