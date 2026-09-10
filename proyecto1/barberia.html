@@ -1,137 +1,348 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Barbería San Martín</title>
+
     <link rel="stylesheet" href="barberia.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-    <h2>Barbería San Martín</h2>
+    <!-- NAVBAR -->
 
-    <div class="links" id="nav">
-        <a href="#" onclick="cerrarMenu()">Inicio</a>
-        <a href="../index.html" onclick="cerrarMenu()">Mi Portfolio</a>
-        <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
-        <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
-    </div>
+    <nav class="navbar">
 
-    <button class="btn" id="reservarBtn">Reservar</button>
+        <h2>Barbería San Martín</h2>
 
-    <div class="menu-responsive" onclick="mostrarOcultarMenu()">
-        ☰
-    </div>
-</nav>
+        <div class="links" id="nav">
+            <a href="#" onclick="cerrarMenu()">Inicio</a>
 
-<section class="hero">
-    <h1>Cortes clásicos y modernos</h1>
-    <p>Atención profesional en un ambiente cómodo y elegante.</p>
+            <a href="../index.html" onclick="cerrarMenu()">
+                Mi Portfolio
+            </a>
 
-    <button class="btn" id="serviciosBtn">
-        Ver servicios
-    </button>
-</section>
+            <a href="#servicios" onclick="cerrarMenu()">
+                Servicios
+            </a>
 
-<section class="aviso">
-    <p>
-        Proyecto ficticio desarrollado para mostrar habilidades de HTML, CSS y JavaScript.
-        La barbería y los datos mostrados no corresponden a un negocio real.
-    </p>
-</section>
-
-<section class="cards" id="servicios">
-    <section class="card">
-        <h3>Corte Clásico</h3>
-        <p>$8.000</p>
-    </section>
-
-    <section class="card">
-        <h3>Arreglo de Barba</h3>
-        <p>$5.000</p>
-    </section>
-
-    <section class="card">
-        <h3>Corte + Barba</h3>
-        <p>$12.000</p>
-    </section>
-</section>
-
-<section class="elegirnos">
-    <h2>¿Por qué elegirnos?</h2>
-
-    <div class="beneficios">
-        <div class="beneficio">
-            <h3>Experiencia</h3>
-            <p>Más de diez años trabajando con clientes de todas las edades.</p>
+            <a href="#contacto" onclick="abrirContacto(); cerrarMenu(); return false;">
+                Contacto
+            </a>
         </div>
 
-        <div class="beneficio">
-            <h3>Atención personalizada</h3>
-            <p>Cada corte se adapta al estilo y preferencias del cliente.</p>
+        <button class="btn" id="reservarBtn">
+            Reservar
+        </button>
+
+        <div class="menu-responsive" onclick="mostrarOcultarMenu()">
+            ☰
         </div>
 
-        <div class="beneficio">
-            <h3>Calidad</h3>
-            <p>Herramientas profesionales y productos de primera línea.</p>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Cortes clásicos y modernos</h1>
+
+        <p>
+            Atención profesional en un ambiente cómodo y elegante.
+        </p>
+
+        <button class="btn" id="serviciosBtn">
+            Ver servicios
+        </button>
+
+    </section>
+
+
+    <!-- AVISO -->
+
+    <section class="aviso">
+
+        <p>
+            Proyecto ficticio desarrollado para mostrar habilidades
+            de HTML, CSS y JavaScript.
+            La barbería y los datos mostrados no corresponden
+            a un negocio real.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+
+    <section class="cards" id="servicios">
+
+        <section class="card">
+            <h3>Corte Clásico</h3>
+            <p>$8.000</p>
+        </section>
+
+        <section class="card">
+            <h3>Arreglo de Barba</h3>
+            <p>$5.000</p>
+        </section>
+
+        <section class="card">
+            <h3>Corte + Barba</h3>
+            <p>$12.000</p>
+        </section>
+
+    </section>
+
+
+    <!-- POR QUÉ ELEGIRNOS -->
+
+    <section class="elegirnos">
+
+        <h2>¿Por qué elegirnos?</h2>
+
+        <div class="beneficios">
+
+            <div class="beneficio">
+
+                <h3>Experiencia</h3>
+
+                <p>
+                    Más de diez años trabajando
+                    con clientes de todas las edades.
+                </p>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <h3>Atención personalizada</h3>
+
+                <p>
+                    Cada corte se adapta al estilo
+                    y preferencias del cliente.
+                </p>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <h3>Calidad</h3>
+
+                <p>
+                    Herramientas profesionales
+                    y productos de primera línea.
+                </p>
+
+            </div>
+
         </div>
+
+    </section>
+
+
+    <!-- HORARIO -->
+
+    <section class="horario">
+
+        <h2>Horario de atención</h2>
+
+        <p id="estado"></p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contacto">
+
+        <p>
+            © <span id="anio"></span> Barbería San Martín
+        </p>
+
+        <p>
+            Proyecto de demostración
+        </p>
+
+    </footer>
+
+
+    <!-- MODAL -->
+
+    <div class="modal" id="modalContacto">
+
+        <div class="modal-contenido">
+
+            <button class="cerrar-modal" onclick="cerrarContacto()">
+                ×
+            </button>
+
+            <h2>Contacto</h2>
+
+            <p>
+                📍 San Martín, Buenos Aires
+            </p>
+
+            <p>
+                📱 WhatsApp: proyecto de demostración
+            </p>
+
+            <p>
+                🕐 Lunes a sábado — 9:00 a 20:00
+            </p>
+
+            <button class="btn" onclick="mensajeDemo()">
+                Enviar mensaje
+            </button>
+
+        </div>
+
     </div>
-</section>
 
-<section class="horario">
-    <h2>Horario de atención</h2>
-    <p id="estado"></p>
-</section>
 
-<footer id="contacto">
-    <p>© <span id="anio"></span> Barbería San Martín</p>
-    <p>Proyecto de demostración</p>
-</footer>
+    <!-- JAVASCRIPT -->
 
-<script>
-const reservarBtn = document.getElementById("reservarBtn");
-const serviciosBtn = document.getElementById("serviciosBtn");
+    <script>
 
-reservarBtn.addEventListener("click", () => {
-    alert("Esta barbería es un proyecto ficticio para portfolio.");
-});
+        const reservarBtn = document.getElementById("reservarBtn");
 
-serviciosBtn.addEventListener("click", () => {
-    document.getElementById("servicios").scrollIntoView({
-        behavior: "smooth"
-    });
-});
+        const serviciosBtn = document.getElementById("serviciosBtn");
 
-const estado = document.getElementById("estado");
-const hora = new Date().getHours();
+        const modalContacto = document.getElementById("modalContacto");
 
-estado.textContent = (hora >= 9 && hora < 20)
-    ? "Abierto ahora"
-    : "Cerrado en este momento";
 
-document.getElementById("anio").textContent = new Date().getFullYear();
+        /* RESERVAR */
 
-let menuVisible = false;
+        reservarBtn.addEventListener("click", () => {
 
-function mostrarOcultarMenu() {
-    const nav = document.getElementById("nav");
+            alert(
+                "Esta barbería es un proyecto ficticio para portfolio."
+            );
 
-    if (menuVisible) {
-        nav.classList.remove("responsive");
-    } else {
-        nav.classList.add("responsive");
-    }
+        });
 
-    menuVisible = !menuVisible;
-}
 
-function cerrarMenu() {
-    const nav = document.getElementById("nav");
-    nav.classList.remove("responsive");
-    menuVisible = false;
-}
-</script>
+        /* SERVICIOS */
+
+        serviciosBtn.addEventListener("click", () => {
+
+            document.getElementById("servicios").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* ESTADO DEL NEGOCIO */
+
+        const estado = document.getElementById("estado");
+
+        const hora = new Date().getHours();
+
+        estado.textContent = (hora >= 9 && hora < 20)
+            ? "Abierto ahora"
+            : "Cerrado en este momento";
+
+
+        /* AÑO */
+
+        document.getElementById("anio").textContent =
+            new Date().getFullYear();
+
+
+        /* MENÚ RESPONSIVE */
+
+        let menuVisible = false;
+
+        function mostrarOcultarMenu() {
+
+            const nav = document.getElementById("nav");
+
+            if (menuVisible) {
+
+                nav.classList.remove("responsive");
+
+            } else {
+
+                nav.classList.add("responsive");
+
+            }
+
+            menuVisible = !menuVisible;
+
+        }
+
+
+        function cerrarMenu() {
+
+            const nav = document.getElementById("nav");
+
+            nav.classList.remove("responsive");
+
+            menuVisible = false;
+
+        }
+
+
+        /* CONTACTO */
+
+        function abrirContacto() {
+
+            modalContacto.classList.add("activo");
+
+        }
+
+
+        function cerrarContacto() {
+
+            modalContacto.classList.remove("activo");
+
+        }
+
+
+        /* MENSAJE DEL MODAL */
+
+        function mensajeDemo() {
+
+            alert(
+                "Esta función estaría conectada a WhatsApp en una web real."
+            );
+
+        }
+
+
+        /* CERRAR MODAL AL TOCAR AFUERA */
+
+        modalContacto.addEventListener("click", (evento) => {
+
+            if (evento.target === modalContacto) {
+
+                cerrarContacto();
+
+            }
+
+        });
+
+
+        /* ESC PARA CERRAR */
+
+        document.addEventListener("keydown", (evento) => {
+
+            if (evento.key === "Escape") {
+
+                cerrarContacto();
+
+            }
+
+        });
+
+    </script>
 
 </body>
+
 </html>
